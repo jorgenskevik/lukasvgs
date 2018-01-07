@@ -40,6 +40,32 @@
     <string name="expired">EXPIRED</string>
     <string name="studentnumber">Studentnr:</string>
     <string name="Barcode">Barcode:</string>
+
+    <string name="login123">Login</string>
+    <string name="infomasjon">Contact Information</string>
+
+
+    <string name="label_phone_auth">Phone Number Authentication</string>
+    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
+    <string name="signed_in">Write phone number</string>
+    <string name="start_phone_auth">Start</string>
+    <string name="verify_phone_auth">Verify</string>
+    <string name="resend_phone_auth">Resend</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_verification_code">Verification Code</string>
+    <string name="status_code_sent">Code Sent</string>
+    <string name="status_verification_failed">Verification failed</string>
+    <string name="status_verification_succeeded">Verification succeeded</string>
+    <string name="status_sign_in_failed">Sign-in failed</string>
+    <string name="instant_validation">(instant validation)</string>
+    <string name="phone_title_text">Phone Number</string>
+    <string name="sign_out">Sign out</string>
+
+
+    <string name="verification">verification successful</string>
+    <string name="landskode">Country Code:</string>
+
+
     <string name="Not">Invalid</string>
     <string name="yourPic">Your picture::</string>
     <string name="writepictureToken">Write picture code:</string>

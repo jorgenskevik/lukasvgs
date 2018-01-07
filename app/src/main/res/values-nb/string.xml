@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KVT - KortFri</string>
-    <string name="headerTwo">Vi digitaliserer ditt skolebevis</string>
+    <string name="app_name">Demo - KortFri</string>
+    <string name="headerTwo">En leverandør av digitale kortløsninger</string>
     <string name="Madewith">Laget med</string>
     <string name="forKVT">for</string>
     <string name="Contactus">Kontakt oss</string>
@@ -33,8 +33,8 @@
     <string name="youareadmin">Du er admin, bruk web-applikasjonen</string>
     <string name="contactIT">Ta kontakt med IT-avdelingen</string>
     <string name="studentbevis">STUDENTBEVIS</string>
-    <string name="companynamelong">Kristen Videregående skole Trøndelag</string>
-    <string name="companyname">KVT</string>
+    <string name="companynamelong">KortFri Norge - Demo</string>
+    <string name="companyname">KortFri</string>
     <string name="GyldigTil">Gyldig for </string>
     <string name="expired">UTGÅTT</string>
     <string name="studentnumber">Studentnr:</string>
@@ -44,6 +44,29 @@
     <string name="writepictureToken">Skriv inn bildekode:</string>
     <string name="setPic">Sett bilde</string>
     <string name="back">Tilbake</string>
+
+    <string name="login123">Logg inn</string>
+    <string name="infomasjon">Kontaktinformasjon</string>
+
+    <string name="verification">Innlogging vellykket</string>
+    <string name="landskode">Landskode:</string>
+
+    <string name="label_phone_auth">Phone Number Authentication</string>
+    <string name="desc_phone_auth">Use a phone number to authenticate with Firebase.</string>
+    <string name="signed_in">Write phone number</string>
+    <string name="start_phone_auth">Start</string>
+    <string name="verify_phone_auth">Verifiser</string>
+    <string name="resend_phone_auth">Send på ny</string>
+    <string name="hint_phone_number">Mobilnummer</string>
+    <string name="hint_verification_code">Verifiserings Kode</string>
+    <string name="status_code_sent">Code Sent</string>
+    <string name="status_verification_failed">Verification failed</string>
+    <string name="status_verification_succeeded">Verification succeeded</string>
+    <string name="status_sign_in_failed">Sign-in failed</string>
+    <string name="instant_validation">(instant validation)</string>
+    <string name="phone_title_text">Phone Number</string>
+    <string name="sign_out">Sign out</string>
+
     <string name="spring">Vårsemester</string>
     <string name="fall">Høstsemester</string>
     <string name="checkBox">Jeg godtar</string>
