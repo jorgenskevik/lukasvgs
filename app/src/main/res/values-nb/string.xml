@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lukas Fagskole - KortFri</string>
+    <string name="app_name">Lukas VGS - KortFri</string>
     <string name="headerTwo">En leverandør av digitale kortløsninger</string>
     <string name="Madewith">Laget med</string>
     <string name="forKVT">for</string>
@@ -15,7 +15,7 @@
     <string name="barcode">Barkode</string>
     <string name="title_activity_test">test</string>
     <string name="title_activity_main4">Main4Activity</string>
-    <string name="studentcard">Studentbevis</string>
+    <string name="studentcard">Skolebevis</string>
     <string name="digitsfail">Digits innlogging feilet</string>
     <string name="closeSettings">Avbryt</string>
     <string name="Loggout">Logg ut</string>
@@ -32,12 +32,12 @@
     <string name="wrongCode">Feil kode, kontakt IT-avdelingen</string>
     <string name="youareadmin">Du er admin, bruk web-applikasjonen</string>
     <string name="contactIT">Ta kontakt med IT-avdelingen</string>
-    <string name="studentbevis">STUDENTBEVIS</string>
-    <string name="companynamelong">Lukas Fagskole</string>
+    <string name="studentbevis">SKOLEBEVIS</string>
+    <string name="companynamelong">Lukas videregående skole</string>
     <string name="companyname">Lukas</string>
     <string name="GyldigTil">Gyldig for </string>
     <string name="expired">UTGÅTT</string>
-    <string name="studentnumber">Studentnr:</string>
+    <string name="studentnumber">Elevnr:</string>
     <string name="Barcode">Barkode:</string>
     <string name="Not">Ugyldig</string>
     <string name="yourPic">Ditt bilde:</string>

@@ -314,9 +314,9 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
         firstAndSirNameString = userDetails.get(SessionManager.KEY_NAME);
         birthdayString = userDetails.get(SessionManager.KEY_BIRTHDATE);
         targetFormat = new SimpleDateFormat("dd-MMM-yyyy", Locale.GERMANY);
-        compandname = getResources().getString(R.string.companynamelong) + " - " + userDetails.get(SessionManager.KEY_CLAS);
 
 
+        compandname = getResources().getString(R.string.companynamelong) + " - " + userDetails.get(SessionManager.KEY_CLAS);;
         studentIDString = userDetails.get(SessionManager.KEY_STUDENTNUMBER);
         path = userDetails.get(SessionManager.KEY_PATH);
         picture = userDetails.get(SessionManager.KEY_PICTURE);

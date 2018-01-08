@@ -378,6 +378,7 @@ public class SessionManager {
 
         user.put(KEY_TURN, pref.getString(KEY_TURN, null));
 
+        user.put(KEY_CLAS, pref.getString(KEY_CLAS, null));
 
         // return user
         return user;
@@ -403,6 +404,7 @@ public class SessionManager {
         editor.remove(KEY_PATH);
         editor.remove(KEY_PICTURE);
         editor.remove(KEY_CHECK);
+        editor.remove(KEY_CLAS);
         editor.commit();
     }
 

@@ -26,6 +26,7 @@ import com.digits.sdk.android.Digits;
 import com.example.jorgenskevik.e_cardholders.Variables.KVTVariables;
 import com.example.jorgenskevik.e_cardholders.models.LoginModel;
 import com.example.jorgenskevik.e_cardholders.models.SessionManager;
+import com.example.jorgenskevik.e_cardholders.models.User;
 import com.example.jorgenskevik.e_cardholders.remote.UserAPI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

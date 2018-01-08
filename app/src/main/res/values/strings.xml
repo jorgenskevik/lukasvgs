@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lukas Fagskole - KortFri</string>
+    <string name="app_name">Lukas VGS - KortFri</string>
     <string name="headerTwo">We digitize your school certificates</string>
     <string name="Madewith">Made with</string>
     <string name="forKVT">for</string>
@@ -14,7 +14,7 @@
     <string name="title_activity_main4">Main4Activity</string>
     <string name="title_activity_test">test</string>
     <string name="barcode">Barcode</string>
-    <string name="studentcard">Student card</string>
+    <string name="studentcard">School card</string>
     <string name="closeSettings">Cancel</string>
     <string name="Loggout">Log out</string>
     <string name="moreInfo">Contact IT support to get yur code</string>
@@ -33,8 +33,8 @@
     <string name="youareadmin">You are admin, use the web app</string>
     <string name="contactIT">Contact IT support</string>
     <string name="signInDigiFail">Login failed</string>
-    <string name="studentbevis">STUDENT CARD</string>
-    <string name="companynamelong">Lukas Fagskole</string>
+    <string name="studentbevis">SCHOOL CARD</string>
+    <string name="companynamelong">Lukas videregående skole</string>
     <string name="companyname">Lukas</string>
     <string name="GyldigTil">Valid for </string>
     <string name="expired">EXPIRED</string>

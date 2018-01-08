@@ -54,7 +54,7 @@ public class User {
 
     @SerializedName("schoolClass")
     @Expose
-    private String schoolclass;
+    private String schoolClass;
 
 
     /**
@@ -68,11 +68,11 @@ public class User {
 
 
     public String getClas (){
-        return schoolclass;
+        return schoolClass;
     }
 
-    public void setSchoolclass(String schoolclass){
-        this.schoolclass = schoolclass;
+    public void setSchoolClass(String schoolclass){
+        this.schoolClass = schoolclass;
     }
 
     /**
