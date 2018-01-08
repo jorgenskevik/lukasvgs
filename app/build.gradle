@@ -27,10 +27,10 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "kortfri.norge.demoreal"
+        applicationId "kortfri.norge.lukasfsreal"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 4
+        versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true

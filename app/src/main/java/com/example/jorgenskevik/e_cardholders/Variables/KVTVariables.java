@@ -11,8 +11,8 @@ public class KVTVariables {
     private static String AcceptVersion = "V2";
     private static String TWITTER_KEY = "OwT8vAGt92TMSDRK3O9naZznW";
     private static String TWITTER_SECRET = "PfC1rhbLQ8WSnmJCgqKwyfPZJyjyAoLHzx61sClci42tiiA38R";
-    private static String Appkey = "8bcc18cc2edd648a13ebdb5b8f7ca2d6";
-    private static String BASE_URL = "https://apidemo.kortfri.no/";
+    private static String Appkey = "bd41cb9c83e4c7a7a14799dd24802132";
+    private static String BASE_URL = "https://apilukasfs.kortfri.no/";
 
     private static String tokenlogin = "";
     private static String userID = "";
@@ -22,6 +22,7 @@ public class KVTVariables {
     private static String pictureToken = "";
     private static String picture = "";
     private static String role = "";
+    private static String Sclas = "";
     private static String birthday = "";
     private static SharedPreferences userIdPrefs;
 
@@ -33,6 +34,10 @@ public class KVTVariables {
      */
     public static String getLocal_URL() {
         return Local_URL;
+    }
+
+    public static String getClas(){
+        return Sclas;
     }
 
     /**
@@ -186,6 +191,10 @@ public class KVTVariables {
      */
     public static void setAppkey(String appkey) {
         Appkey = appkey;
+    }
+
+    public static void setClas(String clas) {
+        KVTVariables.Sclas = clas;
     }
 
     /**

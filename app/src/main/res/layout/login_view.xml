@@ -23,7 +23,7 @@
             android:layout_width="280dp"
             android:layout_height="140dp"
             android:layout_marginTop="45dp"
-            android:src="@drawable/demo1" />
+            android:src="@drawable/lukasfs" />
 
         <TextView
             android:id="@+id/textView11"

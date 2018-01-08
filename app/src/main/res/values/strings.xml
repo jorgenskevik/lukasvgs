@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">KVT - KortFri</string>
+    <string name="app_name">Lukas Fagskole - KortFri</string>
     <string name="headerTwo">We digitize your school certificates</string>
     <string name="Madewith">Made with</string>
     <string name="forKVT">for</string>
     <string name="Contactus">Contact us</string>
     <string name="Sendanemail">Send an email:</string>
-    <string name="Callus">Call KVT:</string>
+    <string name="Callus">Call Lukas:</string>
     <string name="Terms">Terms</string>
     <string name="Picture">Picture</string>
     <string name="termsdescription1">This app will display your name, place of study and the validity of your digital student card. The app will display a photo of you if you choose to select one. The app will function as a student card and can be used as identification for services your place of study has an agreement with. First time usage requires you to be connected to WiFi or a cellular connection to download the information required to display the student card. This information will be stored locally on the app. KortFri does not take any responsibility for tickets, abuse or any usage that violates Norwegian or international laws. The photos uploaded on this app will be deleted from our database once you as a user are deleted from our systems. Users with admin-rights to the KortFri system have the possibility to delete users. Usually this will be the IT-responsible at? your place of study.</string>
@@ -34,8 +34,8 @@
     <string name="contactIT">Contact IT support</string>
     <string name="signInDigiFail">Login failed</string>
     <string name="studentbevis">STUDENT CARD</string>
-    <string name="companynamelong">Kristen Videregående skole Trøndelag</string>
-    <string name="companyname">KVT</string>
+    <string name="companynamelong">Lukas Fagskole</string>
+    <string name="companyname">Lukas</string>
     <string name="GyldigTil">Valid for </string>
     <string name="expired">EXPIRED</string>
     <string name="studentnumber">Studentnr:</string>

@@ -123,6 +123,9 @@ public class SessionManager {
 
     public static final String KEY_TURN = "turn";
 
+    public static final String KEY_CLAS = "clas";
+
+
 
     /**
      * Instantiates a new Session manager.
@@ -150,7 +153,7 @@ public class SessionManager {
      * @param birthday       the birthday
      * @param picture        the picture
      */
-    public void createLoginSession(String name, String email, String token, String studentNumber, String id, String role, String pictureToken, String experationDate, String birthday, String picture){
+    public void createLoginSession(String name, String email, String token, String studentNumber, String id, String role, String pictureToken, String experationDate, String birthday, String picture, String clas){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
@@ -185,6 +188,8 @@ public class SessionManager {
         // Storing picture in pref
         editor.putString(KEY_PICTURE, picture);
 
+        editor.putString(KEY_CLAS, clas);
+
         // commit changes
         editor.commit();
     }
@@ -202,7 +207,7 @@ public class SessionManager {
      * @param experationDate the experation date
      * @param picture        the picture
      */
-    public void createUpdatedLoginSession(String name, String email, String studentNumber, String id, String role, String pictureToken, String dateOfBirth ,String experationDate, String picture){
+    public void createUpdatedLoginSession(String name, String email, String studentNumber, String id, String role, String pictureToken, String dateOfBirth ,String experationDate, String picture, String clas){
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 
@@ -231,6 +236,8 @@ public class SessionManager {
         editor.putString(KEY_EXPERATIONDATE, experationDate);
 
         editor.putString(KEY_PICTURE, picture);
+
+        editor.putString(KEY_CLAS, clas);
 
         // commit changes
         editor.commit();

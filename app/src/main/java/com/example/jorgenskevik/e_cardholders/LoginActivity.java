@@ -458,6 +458,7 @@ public class LoginActivity extends AppCompatActivity  implements
                                             String emailString = LoginList.user.getEmail();
                                             String tokenString = LoginList.token;
                                             String picture = LoginList.user.getPicture();
+                                            String clas = LoginList.user.getClas();
 
                                             String studentNumber = LoginList.user.getStudentNumber();
                                             String id = LoginList.user.getId();
@@ -480,7 +481,7 @@ public class LoginActivity extends AppCompatActivity  implements
                                             String expirationString = dateTimeFormatter2.print(timeToExpiration);
 
                                             //skriv noe her!
-                                            sessionManager.createLoginSession(usernameString,emailString, tokenString, studentNumber, id, role, pictureToken, expirationString, birthDateString, picture);
+                                            sessionManager.createLoginSession(usernameString,emailString, tokenString, studentNumber, id, role, pictureToken, expirationString, birthDateString, picture, clas);
 
                                             if (role.equals("admin")) {
                                                 Context context = getApplicationContext();

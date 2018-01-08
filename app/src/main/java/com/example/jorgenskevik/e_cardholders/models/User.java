@@ -52,6 +52,10 @@ public class User {
     @Expose
     private Date dateOfBirth;
 
+    @SerializedName("schoolClass")
+    @Expose
+    private String schoolclass;
+
 
     /**
      * Gets id.
@@ -60,6 +64,15 @@ public class User {
      */
     public String getId() {
         return id;
+    }
+
+
+    public String getClas (){
+        return schoolclass;
+    }
+
+    public void setSchoolclass(String schoolclass){
+        this.schoolclass = schoolclass;
     }
 
     /**

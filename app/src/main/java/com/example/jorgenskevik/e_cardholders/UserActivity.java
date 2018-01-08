@@ -114,7 +114,7 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
     TextView firstAndSirName, /**
      * The Student id.
      */
-    studentId, /**
+    studentId, nameandclas,  /**
      * The Birth day.
      */
     BirthDay;
@@ -185,7 +185,7 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
     id, /**
      * The Student number.
      */
-    studentNumber, /**
+    studentNumber, compandname, /**
      * The Role.
      */
     role, /**
@@ -309,10 +309,13 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
         BirthDay = (TextView) findViewById(R.id.stringfdato);
         studentId = (TextView) findViewById(R.id.studentid);
         userDetails = sessionManager.getUserDetails();
+        nameandclas = (TextView) findViewById(R.id.companynamelong);
 
         firstAndSirNameString = userDetails.get(SessionManager.KEY_NAME);
         birthdayString = userDetails.get(SessionManager.KEY_BIRTHDATE);
         targetFormat = new SimpleDateFormat("dd-MMM-yyyy", Locale.GERMANY);
+        compandname = getResources().getString(R.string.companynamelong) + " - " + userDetails.get(SessionManager.KEY_CLAS);
+
 
         studentIDString = userDetails.get(SessionManager.KEY_STUDENTNUMBER);
         path = userDetails.get(SessionManager.KEY_PATH);
@@ -335,6 +338,7 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
             Picasso.with(getApplicationContext()).load(f).resize(300,300).centerCrop().into(view2);
         }
 
+        nameandclas.setText(compandname);
         firstAndSirName.setText(firstAndSirNameString);
         extraStudentID = getResources().getString(R.string.studentnumber) + " " + studentIDString;
         studentId.setText(extraStudentID);
@@ -540,6 +544,7 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
                         role = user.getRole();
                         pictureToken = user.getPictureToken();
                         picture = user.getPicture();
+                        String clas = user.getClas();
 
                         userDateOfBirthDate = user.getDateOfBirth();
                         userExpirationDate = user.getExpirationDate();
@@ -554,7 +559,7 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
                         dateTimeExpiration = dateTimeFormatter2.print(dateTime2);
 
                         sessionManager.deletePhoto();
-                        sessionManager.createUpdatedLoginSession(username, email, studentNumber, id, role, pictureToken, dateTimeBirthday, dateTimeExpiration, picture);
+                        sessionManager.createUpdatedLoginSession(username, email, studentNumber, id, role, pictureToken, dateTimeBirthday, dateTimeExpiration, picture, clas);
 
 
                         startDate = null;
@@ -643,6 +648,8 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
                             }
                         }
 
+                        String mellom = getResources().getString(R.string.companynamelong) + " - " + clas;
+                        nameandclas.setText(mellom);
                         firstAndSirName.setText(username);
                         BirthDay.setText(dateTimeBirthday);
                         String extra = getResources().getString(R.string.studentnumber) + " " + studentNumber;
