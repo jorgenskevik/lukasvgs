@@ -355,11 +355,10 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
         }
         if (System.currentTimeMillis() > startDate.getTime()) {
             //Ugyldig
-            selectedColor = Color.rgb(254, 56, 36);
+            selectedColor = Color.rgb(255, 0, 0);
             expirationButton.setText(R.string.expired);
             expirationButton.setTextSize(30);
-            expirationButton.setBackgroundColor(selectedColor);
-
+            expirationButton.setTextColor(selectedColor);
         } else {
             //gyldig
             //selectedColor = Color.rgb(132, 205, 182);
@@ -376,8 +375,7 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
                     expirationButton.setTransformationMethod(null);
                     expirationDate = getResources().getString(R.string.spring) + " " + Calendar.getInstance().get(Calendar.YEAR);
                     expirationButton.setText(expirationDate);
-                    expirationButton.setTextColor(selectedWhite);
-                    expirationButton.setBackgroundColor(selectedColor);
+                    expirationButton.setTextColor(selectedBlack);
                     expirationButton.setTextSize(22);
 
                 }else{
@@ -387,8 +385,7 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
                     expirationButton.setTransformationMethod(null);
                     expirationDate = getResources().getString(R.string.fall) + " " + Calendar.getInstance().get(Calendar.YEAR);
                     expirationButton.setText(expirationDate);
-                    expirationButton.setTextColor(selectedWhite);
-                    expirationButton.setBackgroundColor(selectedColor);
+                    expirationButton.setTextColor(selectedBlack);
                     expirationButton.setTextSize(22);
                 }
             } catch (ParseException e) {
@@ -448,71 +445,77 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
         }
         //sett profilbilde
         if (index == 2) {
-            userDetails = sessionManager.getUserDetails();
-            fourDigits = userDetails.get(SessionManager.KEY_PICTURETOKEN);
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
 
-            if (fourDigits.equals("BRUKT")) {
-                context = getApplicationContext();
-                duration = Toast.LENGTH_SHORT;
-                toast = Toast.makeText(context, getResources().getString(R.string.DenyPicture), duration);
-                toast.show();
+                userDetails = sessionManager.getUserDetails();
+                fourDigits = userDetails.get(SessionManager.KEY_PICTURETOKEN);
 
-            } else {
-                selectedColor = Color.rgb(239, 146, 72);
-                selectedWhite = Color.rgb(255, 255, 255);
-                int selectedBlack = Color.rgb(50, 43, 43);
-                int black = Color.rgb(0, 0, 0);
+                if (fourDigits.equals("BRUKT")) {
+                    context = getApplicationContext();
+                    duration = Toast.LENGTH_SHORT;
+                    toast = Toast.makeText(context, getResources().getString(R.string.DenyPicture), duration);
+                    toast.show();
 
-                LinearLayout linearLayout = new LinearLayout(this);
-                linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
-                linearLayout.setOrientation(LinearLayout.VERTICAL);
-                setContentView(linearLayout);
-                double widthParam = 0.92;
-                double heightParam = 0.5;
-                DisplayMetrics dm = new DisplayMetrics();
-                getWindowManager().getDefaultDisplay().getMetrics(dm);
-                int width = dm.widthPixels;
-                int height = dm.heightPixels;
-                ImageView imageView = new ImageView(this);
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams((int) (width * widthParam), (int) (height * heightParam));
-                imageView.setLayoutParams(layoutParams);
-                layoutParams.gravity = Gravity.CENTER;
-                Button myButtonOk = new Button(this);
-                Button myButtonCansel = new Button(this);
-                myButtonOk.setText("OK");
-                myButtonOk.setTextColor(selectedWhite);
-                myButtonCansel.setTextColor(selectedWhite);
-                myButtonOk.setBackgroundColor(selectedColor);
-                myButtonCansel.setText(R.string.back);
-                myButtonCansel.setBackgroundColor(selectedBlack);
-                TextView myTextView = new TextView(this);
-                myTextView.setTextSize(16);
-                myTextView.setText(R.string.pictureMessage);
-                myTextView.setTextColor(black);
-                myTextView.setPadding(10, 10, 10, 10);
-                linearLayout.addView(myTextView);
-                linearLayout.addView(myButtonOk);
-                linearLayout.addView(myButtonCansel);
+                } else {
+                    selectedColor = Color.rgb(255, 155, 0);
+                    selectedWhite = Color.rgb(255, 255, 255);
+                    int selectedBlack = Color.rgb(50, 43, 43);
+                    int black = Color.rgb(0, 0, 0);
 
-                myButtonOk.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View view) {
-                        photoPickerIntent = new Intent(Intent.ACTION_PICK);
-                        pictureFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-                        picturePath = pictureFile.getPath();
-                        Uri data = Uri.parse(picturePath);
-                        photoPickerIntent.setDataAndType(data, "image/*");
-                        startActivityForResult(photoPickerIntent, IMAGE_GALLERY_REQUEST);
-                    }
-                });
+                    LinearLayout linearLayout = new LinearLayout(this);
+                    linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+                    linearLayout.setOrientation(LinearLayout.VERTICAL);
+                    setContentView(linearLayout);
+                    double widthParam = 0.92;
+                    double heightParam = 0.5;
+                    DisplayMetrics dm = new DisplayMetrics();
+                    getWindowManager().getDefaultDisplay().getMetrics(dm);
+                    int width = dm.widthPixels;
+                    int height = dm.heightPixels;
+                    ImageView imageView = new ImageView(this);
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams((int) (width * widthParam), (int) (height * heightParam));
+                    imageView.setLayoutParams(layoutParams);
+                    layoutParams.gravity = Gravity.CENTER;
+                    Button myButtonOk = new Button(this);
+                    Button myButtonCansel = new Button(this);
+                    myButtonOk.setText("OK");
+                    myButtonOk.setTextColor(black);
+                    myButtonCansel.setTextColor(selectedWhite);
+                    myButtonOk.setBackgroundColor(selectedColor);
+                    myButtonCansel.setText(R.string.back);
+                    myButtonCansel.setBackgroundColor(selectedBlack);
+                    TextView myTextView = new TextView(this);
+                    myTextView.setTextSize(16);
+                    myTextView.setText(R.string.pictureMessage);
+                    myTextView.setTextColor(black);
+                    myTextView.setPadding(10, 10, 10, 10);
+                    linearLayout.addView(myTextView);
+                    linearLayout.addView(myButtonOk);
+                    linearLayout.addView(myButtonCansel);
 
-                myButtonCansel.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View view) {
-                        Intent intent = new Intent(UserActivity.this, UserActivity.class);
-                        startActivity(intent);
-                    }
-                });
+                    myButtonOk.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View view) {
+                            photoPickerIntent = new Intent(Intent.ACTION_PICK);
+                            pictureFile = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+                            picturePath = pictureFile.getPath();
+                            Uri data = Uri.parse(picturePath);
+                            photoPickerIntent.setDataAndType(data, "image/*");
+                            startActivityForResult(photoPickerIntent, IMAGE_GALLERY_REQUEST);
+                        }
+                    });
+
+                    myButtonCansel.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View view) {
+                            Intent intent = new Intent(UserActivity.this, UserActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                }
+            }else {
+                Toast.makeText(this, R.string.GiveAccess, Toast.LENGTH_LONG).show();
             }
         }
+
         //Oppdater brukeren
         if (index == 3) {
             Gson gson = new GsonBuilder()
@@ -571,14 +574,14 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
 
                         if (System.currentTimeMillis() > startDate.getTime()) {
                             //Ugyldig
-                            selectedColor = Color.rgb(254, 56, 36);
+                            selectedColor = Color.rgb(255, 0, 0);
                             expirationButton.setText(R.string.expired);
                             expirationButton.setTextSize(30);
-                            expirationButton.setBackgroundColor(selectedColor);
+                            expirationButton.setTextColor(selectedColor);
                         } else {
                             //gyldig
-                            selectedColor = Color.rgb(239, 146, 72);
-                            selectedWhite = Color.rgb(255, 255, 255);
+                            selectedColor = Color.rgb(255, 155, 0);
+                            selectedWhite = Color.rgb(0, 0, 0);
                             targetFormat = new SimpleDateFormat("dd-MMM-yyyy");
                             try {
                                 if(Calendar.getInstance().get(Calendar.MONTH) + 1 < 8){
@@ -587,7 +590,6 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
                                     expirationDate =getResources().getString(R.string.spring) + " " + Calendar.getInstance().get(Calendar.YEAR);
                                     expirationButton.setText(expirationDate);
                                     expirationButton.setTextColor(selectedWhite);
-                                    expirationButton.setBackgroundColor(selectedColor);
                                     expirationButton.setTextSize(22);
                                 }else{
                                     date = simpleDateFormat.parse(dateTimeExpiration);
@@ -595,7 +597,6 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
                                     expirationDate =  getResources().getString(R.string.fall) + " " + Calendar.getInstance().get(Calendar.YEAR);
                                     expirationButton.setText(expirationDate);
                                     expirationButton.setTextColor(selectedWhite);
-                                    expirationButton.setBackgroundColor(selectedColor);
                                     expirationButton.setTextSize(22);
                                 }
                             } catch (ParseException e) {
@@ -637,9 +638,8 @@ public class UserActivity extends AppCompatActivity implements ActionSheet.Actio
                                     Picasso.with(getApplicationContext()).load(user.getPicture()).into(picassoImageTarget(getApplicationContext(), user.getStudentNumber(), "my_image.jpeg"));
                                     Picasso.with(getApplicationContext()).load(picture).resize(300,300).centerCrop().into(view2);
                                 }else{
-                                    float rotateImage = Float.parseFloat(userDetails.get(SessionManager.KEY_TURN));
-                                    Picasso.with(getApplicationContext()).load(user.getPicture()).rotate(rotateImage).into(picassoImageTarget(getApplicationContext(), user.getStudentNumber(), "my_image.jpeg"));
-                                    Picasso.with(getApplicationContext()).load(picture).rotate(rotateImage).resize(300,300).centerCrop().into(view2);
+                                    Picasso.with(getApplicationContext()).load(user.getPicture()).into(picassoImageTarget(getApplicationContext(), user.getStudentNumber(), "my_image.jpeg"));
+                                    Picasso.with(getApplicationContext()).load(picture).resize(300,300).centerCrop().into(view2);
                                 }
 
                             }catch (NullPointerException e){

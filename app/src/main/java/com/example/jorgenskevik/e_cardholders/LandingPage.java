@@ -49,7 +49,6 @@ public class LandingPage extends Activity{
         String token = user.get(SessionManager.KEY_TOKEN);
 
         //check
-        String check = user.get(SessionManager.KEY_CHECK);
 
         if (name == null || id == null || email == null || token == null) {
 
@@ -57,7 +56,7 @@ public class LandingPage extends Activity{
             buttonLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(LandingPage.this, LoginActivity.class);
+                    Intent intent = new Intent(LandingPage.this, TermsActivity.class);
                     startActivity(intent);
                 }
             });
@@ -68,9 +67,6 @@ public class LandingPage extends Activity{
                     startActivity(intent);
                 }
             });
-        }else if (check == null){
-            Intent intent = new Intent(LandingPage.this, TermsActivity.class);
-            startActivity(intent);
         }else{
             Intent intent = new Intent(LandingPage.this, UserActivity.class);
             startActivity(intent);
